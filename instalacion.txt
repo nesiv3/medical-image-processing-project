@@ -1,0 +1,38 @@
+PASO A PASO PARA INSTALAR Y PREPARAR EL ENTORNO
+
+1. Instalar Python oficial (CPython)
+   - Descarga Python desde https://www.python.org/downloads/
+   - Durante la instalación, selecciona la opción para agregar Python al PATH.
+
+2. Crear y activar un entorno virtual
+   - Abre una terminal en la carpeta del proyecto.
+   - Ejecuta:
+     python -m venv .venv
+   - Activa el entorno virtual:
+     .\.venv\Scripts\activate
+
+3. Seleccionar el intérprete en VS Code
+   - Presiona Ctrl+Shift+P
+   - Escribe Python: Select Interpreter
+   - Elige el que diga solo "Python" (no "PyPy").
+
+4. Instalar CMake y compilador C++
+   - Descarga e instala CMake desde https://cmake.org/download/
+   - Instala Visual Studio Build Tools desde https://visualstudio.microsoft.com/visual-cpp-build-tools/
+   - Durante la instalación, selecciona “Desarrollo de escritorio con C++”.
+
+5. Instalar los requerimientos del proyecto
+   - Con el entorno virtual activado, ejecuta:
+     pip install -r requirements.txt
+
+6. (Opcional) Instalar ITK manualmente si hay problemas
+   - Si falla la instalación de ITK, prueba:
+     pip install itk
+   - Luego:
+     pip install -r requirements.txt --no-deps
+
+7. Ejecutar Jupyter Lab (si lo necesitas)
+   - Ejecuta:
+     uv run --with jupyter jupyter lab
+
+NOTA: Usa siempre CPython, no PyPy, para este proyecto.
