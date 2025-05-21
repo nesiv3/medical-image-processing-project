@@ -1,1 +1,0 @@
-# medical-image-processing-project
